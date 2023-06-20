@@ -76,6 +76,9 @@ def open_new_scene():
     global current_scene
     current_scene = SCENE_NEW
 
+def runttt():
+    execfile("./filename") 
+
 # Define function to handle "E" key press on the obstacle
 def handle_obstacle_interaction():
     if current_scene == SCENE_MAIN and player_sprite.colliderect(obstacle_sprite):
@@ -120,6 +123,9 @@ while game_running:
         player_sprite.y += player_speed
     if keys[pygame.K_d]:
         player_sprite.x += player_speed
+    if keys[pygame.K_t]:
+        execfile('tictactoce.py')
+        
 
     if player_sprite.colliderect(obstacle_sprite):
         if keys[pygame.K_w]:

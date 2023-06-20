@@ -74,8 +74,7 @@ class TicTacToeGame:
                 self.reset_game()
             else:
                 self.current_player = 'O'
-                self.root.after(random.randint(1000, 3000), self.make_bot_move)
-
+                
     def make_bot_move(self):
         available_moves = [i for i, cell in enumerate(self.board) if cell == '']
         if available_moves:
